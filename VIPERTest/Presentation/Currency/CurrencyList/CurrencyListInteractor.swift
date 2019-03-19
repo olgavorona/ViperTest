@@ -57,7 +57,7 @@ class CurrencyListInteractor: CurrencyListInteractorProtocol {
 
         //задержка для ввода текста
         DispatchHelper.dispatchCancelBlock(editSumBlock)
-        editSumBlock = DispatchHelper.dispathAfterDelay(1.0, dispatchBlock: { [weak self] in
+        editSumBlock = DispatchHelper.dispathAfterDelay(1.5, dispatchBlock: { [weak self] in
             guard let `self` = self else { return }
             self.presenter.update(with: self.currencies,
                                   amount: self.amount,
